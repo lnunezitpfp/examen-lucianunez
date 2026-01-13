@@ -41,7 +41,14 @@
             cursor: pointer;
         }
 
-        
+        .btn-producto {
+            background-color: blue;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body>
@@ -61,6 +68,7 @@
             </div>
             <input type="button" value="Calcular suma" class="btn-suma" onclick="calcularSuma()">
             <input type="button" value="Calcular resta" class="btn-resta" onclick="calcularResta()">
+            <input type="button" value="Calcular producto" class="btn-producto" onclick="calcularProducto()">
         </form>
 
         <div id="resultado"></div>
@@ -100,6 +108,17 @@ function calcularResta() {
     
     }
 
+    function calcularProducto() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+
+        if (!isNaN(num1) && !isNaN(num2)) {
+            var producto = num1 * num2;
+            document.getElementById("resultado").innerHTML = "El resultado del producto es: " + producto;
+            } else {
+            document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";    
+            }
+        }
 </script>
 
 </body>
