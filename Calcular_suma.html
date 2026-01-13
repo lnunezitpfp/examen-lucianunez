@@ -58,6 +58,8 @@
             cursor: pointer;
         }
         
+        
+
     </style>
 </head>
 <body>
@@ -145,6 +147,14 @@ function calcularResta() {
         }
     } 
 
+
+        if (!isNaN(num1) && !isNaN(num2)) {
+            var producto = num1 * num2;
+            document.getElementById("resultado").innerHTML = "El resultado del producto es: " + producto;
+            } else {
+            document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";    
+            }
+        
 </script>
 
 
