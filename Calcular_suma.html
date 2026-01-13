@@ -23,7 +23,7 @@
         .input-container input[type="text"] {
             width: 150px;
         }
-		
+        
     </style>
 </head>
 <body>
@@ -66,9 +66,20 @@ function calcularSuma() {
         document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
     }
 }
+
+function calcularResta() {
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    if (!isNaN(num1) && !isNaN(num2)) {
+        var resta = num1 - num2;
+        document.getElementById("resultado").innerHTML = "El resultado de la resta es: " + resta;
+        } else {
+        document.getElementById("resultado").innerHTML = "Por favor, ingrese dos números válidos.";
+
+        }
+    }
 </script>
 
 </body>
 </html>
-
-
